@@ -1,20 +1,24 @@
 import * as React from 'react';
-import Stack from '@mui/material/Stack';
-import {Button, styled} from '@mui/material';
-export default function Botaozao(props) {
+import {Button} from '@mui/material';
+export default function MyButton(props) {
   return (
 
-        <StyledButton variant='contained'
+        <Button variant={props.variant} startIcon={props.startIcon} endIcon={props.endIcon}
             sx={{    
                 color : props.colortext,
                 backgroundColor : props.backgroundcolor,
                 margin : '20px',
                 width : '280px',
                 height : '48px',
-                borderRadius : '8px',}}>{props.text}</StyledButton>
+                borderRadius : '8px',
+                border : props.border,
+                '&:hover' :{
+                  backgroundColor: props.backgroundcolor
+                },
+                }}>{props.text}</Button>
 
   );
 }
 
-const StyledButton = styled(Button)({
-});
+
+

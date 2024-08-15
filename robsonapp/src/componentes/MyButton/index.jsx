@@ -7,8 +7,6 @@ export default function MyButton(props) {
             sx={{    
                 color : props.colortext,
                 backgroundColor : props.backgroundcolor,
-                margin : '20px',
-                width : '280px',
                 height : '48px',
                 borderRadius : '8px',
                 border : props.border,

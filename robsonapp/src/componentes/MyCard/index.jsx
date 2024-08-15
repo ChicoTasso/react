@@ -3,38 +3,36 @@ import { styled } from '@mui/material';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { Typography } from '@mui/material';
+import MyButtonMedio from '../MyButtonMedio';
 
 
 
 export default function MyCard(props) {
     return (
         <>
-            <StyledCard sx={{
-                width: '311px',
-                height: '200px',
-                textAlign: 'start',
-            }}>
+            <Card sx={{height: '200px',textAlign: 'start',}}>
                 <CardContent>
 
-                    <Typography sx={{
-                        display: 'flex',
-                        color: '#339CFF',
-                    }}>
+                    <Typography sx={{ display: 'flex', color: '#339CFF', fontWeight: 'bold', gap:'8px'}}>
                         {props.icon}
-                        <Typography sx={{
-                            display: 'flex',
-                            color: '#339CFF',
-                            marginLeft: '10px',
-                            fontWeight: 'bold',
-
-                        }}>{props.text}</Typography>
-
+                        {props.title}
+                    </Typography>
+                    <Typography sx={{fontSize: '14px', fontWeight:'bold', color: '#6B6E71', marginTop:'10px' }}>
+                        {props.nome}
+                    </Typography>
+                    <Typography sx={{fontSize: '14px', color: '#6B6E71', marginTop:'2px' }}>
+                        {props.data}
+                    </Typography>
+                    <Typography sx={{ fontSize: '14px', color: '#6B6E71', marginTop:'2px' }}>
+                        {props.uf}
+                    </Typography>
+                    <Typography sx={{ marginTop: '15px'}} >
+                        {props.button}
                     </Typography>
 
-                    {props.subtitle}
-                    {props.button}
+
                 </CardContent>
-            </StyledCard>
+            </Card>
         </>
 
     );
